@@ -1,10 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './auth/login/login.component';
+import { HomeComponent } from './shared/home/home.component';
 
-const routes: Routes = [];
+export const Approutes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'login/:token',
+    component: LoginComponent
+  },
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(Approutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

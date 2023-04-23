@@ -1,0 +1,39 @@
+<div class="netflix-background"></div>
+
+<div class="container-fluid home-content">
+  <nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">
+        <img src="../../../assets/img/logo.svg" alt="" srcset="">
+      </a>
+      <div class="d-flex">
+
+        <div ngbDropdown class="nav-item d-inline-block me-3">
+          <button type="button" class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>
+            {{componentSettings.buttons.language}}
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="/login" rel="noopener noreferrer">
+            <button class="btn login-button" type="submit">Login</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="col">
+    <div class="row">
+      <div class="home-phrases">
+        <h1>{{bannerPhrases?.welcome}}</h1>
+        <p>{{bannerPhrases?.promo}}</p>
+      </div>
+    </div>
+  </div>
+</div>

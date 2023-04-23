@@ -3,14 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+//Components
+import { HomeComponent } from './shared/home/home.component';
+
+const bootstrapImports = [
+  NgbModule,
+  NgbDropdownModule
+]
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ...bootstrapImports
   ],
   providers: [],
   bootstrap: [AppComponent]
