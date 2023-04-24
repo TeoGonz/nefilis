@@ -17,18 +17,30 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  public  information  = [
-    {
-      title: "CEO & Fundador",
-      enviroment: [ "Fundador Reed Hastings","Co-Ceo Ted Sarandos","Co-Ceo Greg Peters"],
-      description: [`Es un papel decisivo en la definición de la empresa, como formalizar la cultura de trabajo de Netflix en torno a los principios de "libertad y responsabilidad".
-    También guió a Netflix a través de grandes cambios estratégicos, incluida la transición de un negocio de DVD por correo al streaming, el impulso hacia la programación original y la expansión global.`],
-    },
-  ]
+
+  movies :string = ""
+  preview :string = ""
+  previewSlice : any;
+  moviesPreview : any;
+  urlVideo:string = ""
+
+  getMovies(){
+    var moviesSlice:any = []
+    this.preview  =  String(localStorage.getItem('new_movies'))
+    this.previewSlice = this.preview.split('+');
+    this.previewSlice.forEach(function (value:any) {
+      var slice = value.split('|')
+      if(slice[0]){moviesSlice.push(slice)}
+      
+  });
+  this.moviesPreview = moviesSlice;
+}
+
 
   constructor() { }
 
   ngOnInit() {
+    this.getMovies();
   }
 
 }
