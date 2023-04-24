@@ -12,23 +12,24 @@
     left: 0;
     background: black !important;
     li > a {
-      color: color !important;
       span {
-        color: white;
+        color: $primary-color;
       }
       i {
-        color: white;
+        color: $primary-color;
       }
     }
     .dropdown-user {
       a {
-        color: white;
+        span {
+          color: $primary-color;
+        }
       }
     }
   }
 
   .bi-list {
-    color: white;
+    color: $primary-color;
   }
 
   .dropdown-toggle {
@@ -143,8 +144,15 @@
 
   .nav-item:hover {
     cursor: pointer;
-    background-color: $primary-color !important;
+    background-color: $primary-color;
     font-weight: bold;
+    color: white;
+    span {
+      color: white !important;
+    }
+    i {
+      color: white !important;
+    }
   }
 
   .nav-icon {

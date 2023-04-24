@@ -4,6 +4,7 @@
       role="tab" aria-controls="nav-home" aria-selected="true">Ceo y fundador</button>
   </div>
 </nav>
+
 <div class="tab-content" style="background-color: white;" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
     <div class="row">
@@ -12,9 +13,9 @@
         <section>
           <h4>Ambiente</h4>
           <ul>
-            <li>Fundador <b>Reed Hastings</b></li>
-            <li>Co-Ceo <b>Reed Hastings</b></li>
-            <li>Co-Ceo <b>Reed Hastings</b></li>
+            <li><b>Fundador</b> Reed Hastings</li>
+            <li><b>Co-Ceo</b> Ted Sarados</li>
+            <li><b>Co-Ceo</b> Greg Peters</li>
           </ul>
         </section>
 
@@ -44,7 +45,7 @@
 
           <ng-container *ngFor="let employee of employeeInfo">
             <div class="card card-employee m-3">
-              <img width=" 180px" height="240px" src="{{employee.img}}" alt="">
+              <img src="{{employee.img}}" alt="">
               <span>
                 <h3>{{employee.name}}</h3>
                 <p class="text-muted">{{employee.job}}</p>

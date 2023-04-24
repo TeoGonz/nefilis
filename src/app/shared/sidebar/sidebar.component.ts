@@ -12,9 +12,9 @@ export class SidebarComponent {
 
   public navElements: Array<any> = [
     { title: 'CEO & Fundador', icon: 'fs-4 bi-person', route: 'admin/founders' },
-    { title: 'Ingeniería', icon: 'fs-4 bi-gear-fill', route: '#' },
-    { title: 'Planeación', icon: 'fs-4 bi-calendar-check', route: '#' },
-    { title: 'Contenidos', icon: 'fs-4 bi-tv', route: '#' },
+    { title: 'Ingeniería', icon: 'fs-4 bi-gear-fill', route: 'admin/engineering' },
+    { title: 'Planeación', icon: 'fs-4 bi-calendar-check', route: 'admin/planning' },
+    { title: 'Contenidos', icon: 'fs-4 bi-tv', route: 'admin/contents' },
     { title: 'Finanzas', icon: 'fs-4 bi-cash', route: '#' },
     { title: 'Comunicaciones', icon: 'fs-4 bi-soundwave', route: '#' },
     { title: 'Recursos humanos', icon: 'fs-4 bi-people', route: '#' },

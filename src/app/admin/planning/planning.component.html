@@ -1,0 +1,51 @@
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+      role="tab" aria-controls="nav-home" aria-selected="true">Planeación</button>
+  </div>
+</nav>
+
+<div class="tab-content" style="background-color: white;" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Planeación</h1>
+        <section>
+          <h4>Ambiente</h4>
+          <ul>
+            <li><b>Vice presidente:</b> Pablo Pérez de Rosso</li>
+            <li><b>Equipo de estrategias</b></li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Estrategía y análisis</h4>
+          <p>
+            Es un grupo central dentro de Netflix que guía las decisiones comerciales críticas en toda la empresa a
+            través de análisis financieros, operativos y estratégicos.
+          </p>
+          <p>
+            Estrategia, planificación y análisis de la compañía para las divisiones de contenidos, estudios, marketing,
+            comunicaciones, productos, colaboraciones y juegos. Este grupo se encarga de facilitar la dirección
+            estratégica del negocio y de tomar decisiones empresariales clave a partir del análisis de datos, la
+            investigación, la planificación y la predicción.
+          </p>
+        </section>
+
+
+        <section class="d-flex justify-content-center align-items-center p-3">
+          <ng-container *ngFor="let employee of employeeInfo">
+            <div class="card card-employee m-3">
+              <img src="{{employee.img}}" alt="">
+              <span>
+                <h3>{{employee.name}}</h3>
+                <p class="text-muted">{{employee.job}}</p>
+              </span>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</div>

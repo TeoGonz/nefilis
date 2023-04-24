@@ -1,0 +1,201 @@
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+      role="tab" aria-controls="nav-home" aria-selected="true">Contenidos</button>
+
+    <button class="nav-link" id="nav-collaborations-tab" data-bs-toggle="tab" data-bs-target="#nav-collaborations"
+      type="button" role="tab" aria-controls="nav-collaborations" aria-selected="true">Colaboraciones</button>
+
+    <button class="nav-link" id="nav-acquisition-tab" data-bs-toggle="tab" data-bs-target="#nav-acquisition"
+      type="button" role="tab" aria-controls="nav-acquisition" aria-selected="true">Adquisición de contenidos</button>
+
+    <button class="nav-link" id="nav-legal-tab" data-bs-toggle="tab" data-bs-target="#nav-legal" type="button"
+      role="tab" aria-controls="nav-legal" aria-selected="true">Contenido legal</button>
+
+    <button class="nav-link" id="nav-production-tab" data-bs-toggle="tab" data-bs-target="#nav-production" type="button"
+      role="tab" aria-controls="nav-production" aria-selected="true">Producción</button>
+
+    <button class="nav-link" id="nav-post-production-tab" data-bs-toggle="tab" data-bs-target="#nav-post-production"
+      type="button" role="tab" aria-controls="nav-post-production" aria-selected="true">Post-producción</button>
+  </div>
+</nav>
+
+<div class="tab-content" style="background-color: white;" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Contenidos</h1>
+        <section>
+          <h4>Ambiente</h4>
+          <ul>
+            <li><b>Directora Jefa:</b> Bela Bajaria</li>
+            <li><b>Vice presidente:</b> Francisco Ramos</li>
+            <li><b>Vice presidente:</b> Larry Tanz</li>
+            <li><b>Vice presidente:</b> Minyoung Kim</li>
+          </ul>
+        </section>
+
+        <section>
+          <p>
+            Contenidos en Netflix es uno de los más importantes de la empresa, ya que es responsable de supervisar la
+            estrategia de contenido global de la compañía. Es responsable de desarrollar la estrategia de contenido de
+            Netflix, incluyendo la selección de géneros, formatos y tipos de contenido, así como el presupuesto y el
+            calendario de producción.
+          </p>
+        </section>
+
+
+        <section class="d-flex justify-content-center align-items-center p-3">
+          <ng-container>
+            <div class="card card-employee m-3">
+              <img src="{{employeeInfo[0].img}}" alt="">
+              <span>
+                <h3>{{employeeInfo[0].name}}</h3>
+                <p class="text-muted">{{employeeInfo[0].job}}</p>
+              </span>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="nav-collaborations" role="tabpanel" aria-labelledby="nav-collaborations-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Colaboraciones</h1>
+        <section>
+          <h4>Ambiente</h4>
+          <ul>
+            <li><b>Directora global de colaboraciones:</b> Maria Ferreras</li>
+          </ul>
+        </section>
+
+        <section>
+          <p>
+            Supervisa todas las alianzas de Netflix, cómo sus pactos con empresas de telecomunicaciones.
+          </p>
+        </section>
+
+
+        <section class="d-flex justify-content-center align-items-center p-3">
+          <ng-container>
+            <div class="card card-employee m-3">
+              <img src="{{employeeInfo[1].img}}" alt="">
+              <span>
+                <h3>{{employeeInfo[1].name}}</h3>
+                <p class="text-muted">{{employeeInfo[1].job}}</p>
+              </span>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="nav-acquisition" role="tabpanel" aria-labelledby="nav-acquisition-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Adquisición de contenido</h1>
+        <section>
+          <h4>Ambiente</h4>
+          <ul>
+            <li><b>Vicepresidenta de operaciones de estudio:</b> Amy Reinhard</li>
+          </ul>
+        </section>
+
+        <section>
+          <p>
+            Son responsables de obtener e identificar estratégicamente oportunidades de programación adicionales y
+            asociaciones con equipos de contenido externo para ayudar a entregar contenido diverso para nuestro público
+            en todo el mundo.
+          </p>
+        </section>
+
+
+        <section class="d-flex justify-content-center align-items-center p-3">
+          <ng-container>
+            <div class="card card-employee m-3">
+              <img src="{{employeeInfo[2].img}}" alt="">
+              <span>
+                <h3>{{employeeInfo[2].name}}</h3>
+                <p class="text-muted">{{employeeInfo[2].job}}</p>
+              </span>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="nav-legal" role="tabpanel" aria-labelledby="nav-legal-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Contenido legal</h1>
+
+        <section>
+          <p>
+            Es responsable de todos los asuntos legales relacionados con la producción, adquisición y distribución
+            de contenido global por Netflix.
+          </p>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="nav-production" role="tabpanel" aria-labelledby="nav-production-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Gestión de producción</h1>
+        <section>
+          <h4>Ambiente</h4>
+          <ul>
+            <li><b>Director de películas de Netflix:</b> Scott Stuber</li>
+          </ul>
+        </section>
+
+        <section>
+          <p>
+            El equipo de producción física de Netflix supervisa la gestión de producción de nuestros proyectos para
+            ejecutar efectivamente la visión creativa de nuestras series, películas y documentales para alegrar a
+            nuestros miembros.
+          </p>
+        </section>
+
+
+        <section class="d-flex justify-content-center align-items-center p-3">
+          <ng-container>
+            <div class="card card-employee m-3">
+              <img src="{{employeeInfo[3].img}}" alt="">
+              <span>
+                <h3>{{employeeInfo[3].name}}</h3>
+                <p class="text-muted">{{employeeInfo[3].job}}</p>
+              </span>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="nav-post-production" role="tabpanel" aria-labelledby="nav-post-production-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Gestión de post-producción</h1>
+
+        <section>
+          <p>
+            La organización Post Production Management se asocia con equipos y productores de contenido de Netflix en
+            todo el mundo y en todas las facetas de producción - desde la preparación hasta la entrega.
+          </p>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</div>

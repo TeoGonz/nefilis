@@ -1,0 +1,84 @@
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+      role="tab" aria-controls="nav-home" aria-selected="true">Ingeniería</button>
+  </div>
+</nav>
+
+<div class="tab-content" style="background-color: white;" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Ingeniería</h1>
+        <section>
+          <h4>Ambiente</h4>
+          <ul>
+            <li>Equipos de desarrollo</li>
+            <li>Líder de desarrollo</li>
+            <li>Director de ingeniería</li>
+            <li>Manager de desarrollo</li>
+            <li>Vicepresidenta de ingeniería</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Ingeniería de interfaz de usuarios</h4>
+          <p>
+            Los ingenieros de clientes y UI construyen la plataforma de aplicaciones de Netflix, el motor de transmisión
+            y las experiencias de usuario utilizadas por los miembros actuales y futuros de Netflix en todos los
+            dispositivos, incluidas las computadoras portátiles / computadoras de escritorio, teléfonos / tablets,
+            SmartTv, consolas de juegos, decodificadores y barras de transmisión. Además, estos ingenieros desarrollan
+            las aplicaciones utilizadas por nuestros socios creativos internos y externos que producen
+            contenido original.
+          </p>
+        </section>
+
+        <section>
+          <h4>Servicios de tecnología</h4>
+          <p>
+            Enfocados a gestionar los recursos sobre Operaciones y Soporte, y los equipos de Servicios de Proyecto.
+            Netflix Technology Services es un equipo combinado, con antecedentes e intereses únicos, que comparten una
+            pasión por las personas y la tecnología.
+          </p>
+          <p>
+            Nos dedicamos a brindar un apoyo continuo a nuestras necesidades despejar los obstáculos tecnológicos,
+            implementar tecnologías nuevas e innovadoras, mejorar los flujos de trabajo. Nos comprometemos temprano y a
+            menudo con nuestros colegas y socios para impulsar con éxito la experiencia de una base fundamental a otra.
+          </p>
+        </section>
+
+        <section>
+          <h4>Ingeniería Central</h4>
+          <p>
+            Encargados de generar el desarrollo del algoritmo del producto, nuevas características del producto, entrega
+            de contenido y módulos de servicio para el producto. Abarca múltiples equipos en Netflix centrados en crear,
+            construir, probar, implementar, transmitir y monitorear la pila tecnológica de Netflix.
+          </p>
+        </section>
+
+        <section>
+          <h4>Ingeniería en ciberseguridad</h4>
+          <p>
+            Somos pioneros en nuevas fronteras en seguridad en la nube y protección de contenido y buscamos compartir
+            nuestras técnicas y conceptos. Nuestro equipo de impresionantes profesionales de seguridad construye y
+            protege los sistemas que deleitan a más de cien millones de espectadores en todo el mundo.
+          </p>
+        </section>
+
+
+        <section class="d-flex justify-content-center align-items-center p-3">
+          <ng-container *ngFor="let employee of employeeInfo">
+            <div class="card card-employee m-3">
+              <img src="{{employee.img}}" alt="">
+              <span>
+                <h3>{{employee.name}}</h3>
+                <p class="text-muted">{{employee.job}}</p>
+              </span>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</div>

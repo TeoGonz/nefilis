@@ -4,6 +4,9 @@ import { AdminComponent } from './admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FounderComponent } from './founder/founder.component';
 import { FormComponent } from '../content/form/form.component';
+import { EngineeringComponent } from './engineering/engineering.component';
+import { PlanningComponent } from './planning/planning.component';
+import { ContentsComponent } from './contents/contents.component';
 
 const adminRoutes: Routes = [
   {
@@ -20,6 +23,18 @@ const adminRoutes: Routes = [
       {
         path: 'add',
         component: FormComponent
+      },
+      {
+        path: 'engineering',
+        component: EngineeringComponent
+      },
+      {
+        path: 'planning',
+        component: PlanningComponent
+      },
+      {
+        path: 'contents',
+        component: ContentsComponent
       }
       /* {
         path: 'add',
@@ -41,6 +56,13 @@ const adminRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(adminRoutes),
   ],
-  declarations: [AdminComponent, FounderComponent, FormComponent]
+  declarations: [
+    AdminComponent,
+    FounderComponent,
+    FormComponent,
+    EngineeringComponent,
+    PlanningComponent,
+    ContentsComponent
+  ]
 })
 export class AdminModule { }

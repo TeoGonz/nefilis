@@ -1,0 +1,59 @@
+@import "./variables.scss";
+:host {
+  h1 {
+    color: $primary-color;
+  }
+
+  .tab-content {
+    box-shadow: $tab-shadow;
+    padding: 2em;
+  }
+
+  .card-employee {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border-radius: 15px;
+    box-shadow: $tab-shadow;
+    height: auto;
+    img {
+      width: 185px;
+      height: 240px;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        text-align: center;
+        width: 185px;
+        color: $primary-color;
+        margin-top: 5px;
+      }
+      p {
+        width: 180px;
+        margin: 0px;
+        text-align: center;
+      }
+    }
+  }
+
+  section {
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+
+  .nav-tabs {
+    .nav-link {
+      color: black;
+    }
+    .active {
+      color: $primary-color;
+    }
+  }
+}
