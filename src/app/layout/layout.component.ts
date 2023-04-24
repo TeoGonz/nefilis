@@ -10,6 +10,9 @@ export class LayoutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if(!localStorage.getItem("menu")){
+      localStorage.setItem("menu", "true")
+    }
   }
 
 }

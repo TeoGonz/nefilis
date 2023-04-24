@@ -10,6 +10,7 @@ import { ContentsComponent } from './contents/contents.component';
 import { FinanceComponent } from './finance/finance.component';
 import { CommunicationsComponent } from './communications/communications.component';
 import { JudicialComponent } from './judicial/judicial.component';
+import { FormsModule } from '@angular/forms';
 
 const adminRoutes: Routes = [
   {
@@ -69,6 +70,7 @@ const adminRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(adminRoutes),
   ],
   declarations: [

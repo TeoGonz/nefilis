@@ -23,6 +23,8 @@ export class FormComponent {
   moviesPreview: any;
   urlVideo: string = ""
 
+  titulo:string = ""
+
   public form: any = {
     titulo: "",
     portada: "",
