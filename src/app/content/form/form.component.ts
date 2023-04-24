@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
+  public isOpen;
+
   public bannerPhrases = {
     welcome: "Películas ilimitadas, shows de tv y más.",
     promo: "Mira lo que quieras, cancela cuando quieras."
@@ -22,14 +24,17 @@ export class FormComponent {
   previewSlice: any;
   moviesPreview: any;
   urlVideo: string = ""
-
-  titulo:string = ""
+  titulo: string = ""
 
   public form: any = {
     titulo: "",
     portada: "",
     trailer: "",
     sinopsis: ""
+  }
+
+  constructor() {
+    this.isOpen = false;
   }
 
   sendForm() {

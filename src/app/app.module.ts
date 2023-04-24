@@ -13,7 +13,6 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderNavComponent } from './shared/header-nav/header-nav.component';
 import { LoginComponent } from './auth/login/login.component';
-import { FormComponent } from './content/form/form.component';
 
 
 const bootstrapImports = [
@@ -27,7 +26,6 @@ const bootstrapImports = [
     LoginComponent,
     LayoutComponent,
     HeaderNavComponent,
-    InformationComponent,
     SidebarComponent,
   ],
   imports: [

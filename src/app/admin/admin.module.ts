@@ -13,6 +13,8 @@ import { JudicialComponent } from './judicial/judicial.component';
 import { RrhhComponent } from './rrhh/rrhh.component';
 import { MarketingComponent } from './marketing/marketing.component';
 import { FormsModule } from '@angular/forms';
+import { InformationComponent } from '../entity/information/information.component';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 const adminRoutes: Routes = [
   {
@@ -79,6 +81,7 @@ const adminRoutes: Routes = [
 
 @NgModule({
   imports: [
+    NgbCollapseModule,
     CommonModule,
     FormsModule,
     RouterModule.forChild(adminRoutes),
@@ -94,6 +97,7 @@ const adminRoutes: Routes = [
     CommunicationsComponent,
     JudicialComponent,
     RrhhComponent,
+    InformationComponent,
     MarketingComponent
   ]
 })
