@@ -7,6 +7,7 @@ import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 //Components
 import { HomeComponent } from './shared/home/home.component';
+import { InformationComponent } from './entity/information/information.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 const bootstrapImports = [
@@ -17,6 +18,7 @@ const bootstrapImports = [
   declarations: [
     AppComponent,
     HomeComponent,
+    InformationComponent,
     SidebarComponent
   ],
   imports: [
