@@ -1,110 +1,75 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar-web" style="height: 100vh; position: fixed; top:0; z-index: 99999;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <svg class="bi pe-none me-2" width="40" height="32">
-            <use xlink:href="#bootstrap" />
-        </svg>
-        <span class="fs-4">
-            <div class="row">
-                <div class="col-md-8">
-                    <img src="../../../assets/img/logo.svg"  class="img-sidebar-web" *ngIf="isExpanded" alt="">
-                    <img src="../../../assets/img/netflix.svg"   class="img-sidebar"  *ngIf="!isExpanded" alt="">
-                </div>
-                <div class="col-md-4" style="text-align: right;">
-                    <i class="bi bi-list" *ngIf="!isExpanded" (click)="sendForm('true')"></i>
-                    <i class="bi bi-list" *ngIf="isExpanded"  (click)="sendForm('false')"></i>
-                </div>
-            </div>
-            
-
-        </span>
+<div class="d-flex flex-column flex-shrink-0 p-0 bg-light sidebar-web"
+  style="height: 100vh; position: fixed; top:0; z-index: 99999;">
+  <span class="nav-icon">
+    <a href="/">
+      <img src="../../../assets/img/logo.svg" class="img-sidebar-web" *ngIf="isExpanded" alt="">
+      <img src="../../../assets/img/netflix.svg" class="img-sidebar" *ngIf="!isExpanded" alt="">
     </a>
-    <hr>
-     <ul *ngIf="isExpanded" [ngClass]="{'nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start': isExpanded, 'nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center': !isExpanded}"  class="" id="menu">
-        <li class="nav-item">
-            <a href="#" class="nav-link align-middle px-0">
-                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#submenu1" class="nav-link px-0 align-middle">
-                <i class="fs-4 bi-person"></i> <span class="ms-1 d-none d-sm-inline">CEO & Fundador</span> </a>
-           
-        </li>
-        
-        <li class="nav-item">
-            <a href="#" class="nav-link px-0 align-middle">
-                <i class="bi bi-gear-fill"></i><span class="ms-1 d-none d-sm-inline">Ingeniería</span></a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link px-0 align-middle">
-                <i class="bi bi-calendar-check"></i> <span class="ms-1 d-none d-sm-inline">Planeación</span></a>
-        </li>
-        <li class="nav-item">
-            <a href="#submenu2" class="nav-link px-0 align-middle ">
-                <i class="bi bi-tv"></i><span class="ms-1 d-none d-sm-inline">Contenidos</span></a>
-        </li>
-        <li class="nav-item">
-            <a href="#submenu2" class="nav-link px-0 align-middle ">
-                <i class="bi bi-cash"></i> <span class="ms-1 d-none d-sm-inline">Finanzas</span></a>
-        </li>
-        <li class="nav-item">
-            <a href="#submenu2" class="nav-link px-0 align-middle ">
-                <i class="bi bi-soundwave"></i>  <span class="ms-1 d-none d-sm-inline">Comunicaciones</span></a>
-        </li>
-        <li class="nav-item">
-            <a href="#submenu2" class="nav-link px-0 align-middle ">
-                <i class="bi bi-cast"></i> <span class="ms-1 d-none d-sm-inline">Judicial</span></a>
-        </li>
-        <li class="nav-item">
-            <a href="#submenu2" class="nav-link px-0 align-middle ">
-                <i class="bi bi-people"></i><span class="ms-1 d-none d-sm-inline">Recursos humanos</span></a>
-        </li>
-        <li class="nav-item">
-            <a href="#submenu2" class="nav-link px-0 align-middle ">
-                <i class="bi bi-newspaper"></i><span class="ms-1 d-none d-sm-inline">Marketing</span></a>
-        </li>
-        
-        
-    </ul>
-    <ul  *ngIf="!isExpanded"   class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
-        <li class="nav-item">
-            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
-                <i class="bi-house fs-1"></i>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
-                <i class="bi-speedometer2 fs-1"></i>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
-                <i class="bi-table fs-1"></i>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
-                <i class="bi-heart fs-1"></i>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
-                <i class="bi-people fs-1"></i>
-            </a>
-        </li>
-    </ul>
-    <hr>
-    <div ngbDropdown class="nav-item d-inline-block me-3 dropdown-user">
-        <a class="d-flex align-items-center  p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>
-            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>mdo</strong>
+    <!-- <div class="col-md-4" style="text-align: right;">
+          <i class="bi bi-list" *ngIf="!isExpanded" (click)="sendForm('true')"></i>
+          <i class="bi bi-list" *ngIf="isExpanded" (click)="sendForm('false')"></i>
+        </div> -->
+  </span>
+  <hr>
+  <ul *ngIf="isExpanded"
+    [ngClass]="{'nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start': isExpanded, 'nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center': !isExpanded}"
+    class="p-0 " id="menu">
+
+    <ng-container *ngFor="let menu of navElements">
+      <li class="nav-item">
+        <a [routerLink]="[menu.route]" class="nav-link align-middle">
+          <i class="{{menu.icon}} ms-3"></i> <span class="ms-2 d-none d-sm-inline">{{menu.title}}</span>
         </a>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <button ngbDropdownItem>Action - 1</button>
-          <button ngbDropdownItem>Another Action</button>
-          <button ngbDropdownItem>Something else is here</button>
-        </div>
-      </div>
-    
+      </li>
+    </ng-container>
+
+  </ul>
+  <!-- <ul *ngIf="!isExpanded"
+    class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
+    <li class="nav-item">
+      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-original-title="Home">
+        <i class="bi-house fs-1"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-original-title="Dashboard">
+        <i class="bi-speedometer2 fs-1"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-original-title="Orders">
+        <i class="bi-table fs-1"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-original-title="Products">
+        <i class="bi-heart fs-1"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-original-title="Customers">
+        <i class="bi-people fs-1"></i>
+      </a>
+    </li>
+  </ul> -->
+  <hr>
+  <div ngbDropdown class="nav-item d-inline-block dropdown-user">
+    <a class="d-flex align-items-center  p-3 link-light text-decoration-none dropdown-toggle" id="dropdownBasic1"
+      ngbDropdownToggle>
+      <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+      <span>mdo</span>
+    </a>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <button ngbDropdownItem>Perfil</button>
+      <button ngbDropdownItem>Ajustes</button>
+      <button ngbDropdownItem [routerLink]="['login']">Cerrar sesión</button>
+    </div>
+  </div>
+
 
 </div>

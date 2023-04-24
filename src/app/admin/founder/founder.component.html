@@ -1,0 +1,59 @@
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+      role="tab" aria-controls="nav-home" aria-selected="true">Ceo y fundador</button>
+  </div>
+</nav>
+<div class="tab-content" style="background-color: white;" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Ceo y fundador</h1>
+        <section>
+          <h4>Ambiente</h4>
+          <ul>
+            <li>Fundador <b>Reed Hastings</b></li>
+            <li>Co-Ceo <b>Reed Hastings</b></li>
+            <li>Co-Ceo <b>Reed Hastings</b></li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Fundador</h4>
+          <p>
+            Es un papel decisivo en la definición de la empresa, como formalizar la cultura de trabajo de Netflix en
+            torno
+            a
+            los principios de "libertad y responsabilidad".
+            También guió a Netflix a través de grandes cambios estratégicos, incluida la transición de un negocio de DVD
+            por
+            correo al streaming, el impulso hacia la programación original y la expansión global.
+          </p>
+        </section>
+
+        <section>
+          <h4>Ceo</h4>
+          <p>
+            Como jefe de operaciones y de producto, supervisa muchos de los detalles necesarios para que el servicio sea
+            un
+            éxito, desde fijar el precio hasta experimentar con nuevas funciones.
+          </p>
+        </section>
+
+        <section class="d-flex justify-content-center align-items-center p-3">
+
+          <ng-container *ngFor="let employee of employeeInfo">
+            <div class="card card-employee m-3">
+              <img width=" 180px" height="240px" src="{{employee.img}}" alt="">
+              <span>
+                <h3>{{employee.name}}</h3>
+                <p class="text-muted">{{employee.job}}</p>
+              </span>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</div>

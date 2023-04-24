@@ -1,0 +1,29 @@
+@import "../../assets/scss/variables.scss";
+.left-sidebar {
+  /* display: none; */
+}
+.page-wrapper {
+  margin-left: 0;
+}
+
+.page-wrapper {
+  background: $background-container;
+  position: relative;
+  transition: 0.2s ease-in;
+}
+
+.page-wrapper > .container-fluid {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  margin-left: 0;
+  margin-left: 240px;
+}
+
+:host {
+  footer {
+    background: $primary-color;
+  }
+}

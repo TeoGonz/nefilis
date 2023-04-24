@@ -1,0 +1,48 @@
+<div class="">
+  <!-- <app-header-nav></app-header-nav> -->
+
+  <aside class="left-sidebar">
+    <app-sidebar></app-sidebar>
+  </aside>
+
+  <!-- Page wrapper  -->
+  <div class="page-wrapper">
+
+    <!-- Container fluid  -->
+
+    <div class="container-fluid">
+
+      <!-- Start Page Content -->
+
+      <router-outlet></router-outlet>
+
+      <!-- End Start Page Content -->
+
+    </div>
+
+    <!-- End Container fluid  -->
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-white">©2023 Uniremington</span>
+      </div>
+
+      <ul class="nav col-md-4 d-flex align-items-center justify-content-end list-unstyled">
+        <li class="me-3">
+          <a href="https://www.uniremington.edu.co/">
+            <img src="../../assets/img/components/footer/uniremington.svg" width="25" height="25" alt="" srcset="">
+          </a>
+        </li>
+        <li class="me-3">
+          <span class="mb-3 mb-md-0 text-white">TGS</span>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <!-- End Page wrapper  -->
+</div>
