@@ -1,0 +1,81 @@
+<div class="col container">
+  <div class="row">
+    <div class="home-phrases">
+      <h1>{{bannerPhrases?.welcome}}</h1>
+      <p>{{bannerPhrases?.promo}}</p>
+      <form (ngSubmit)="sendForm()">
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form4Example1" name="titulo" class="form-control" />
+          <label class="form-label" for="form4Example1">Título</label>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form4Example2" name="trailer" class="form-control" />
+          <label class="form-label" for="form4Example2">Trailer</label>
+        </div>
+
+        <div class="form-outline mb-4">
+          <input type="url" name="portada" id="form4Example2" class="form-control" />
+          <label class="form-label" for="form4Example2">Portada</label>
+        </div>
+
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+          <textarea class="form-control" name="sinopsis" id="form4Example3" rows="4"></textarea>
+          <label class="form-label" for="form4Example3">Sinópsis</label>
+        </div>
+
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+      </form>
+      <!-- Button trigger modal -->
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <iframe src="[(ngModel)]='urlVideo'" title="JACKASS 4 POR SIEMPRE Tráiler Español (2021)" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+
+        <div class="row">
+          <div class="col col-md-4" *ngFor="let i of moviesPreview">
+            <div class="card">
+              <img src="{{i[1]}}" class="card-img-top" alt="Fissure in Sandstone" />
+              <div class="card-body">
+                <h5 class="card-title">{{i[0]}}</h5>
+                <p class="card-text">{{i[3]}}</p>
+
+                <a href="{{i[2]}}" target="_blank" rel="noopener noreferrer">
+                  <button type="button" class="btn btn-primary" (click)="seeTrailer(i[2])" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <i class="bi bi-camera-reels"></i> Trailer
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

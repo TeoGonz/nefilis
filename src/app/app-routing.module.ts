@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './shared/home/home.component';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
+import { FormComponent } from './content/form/form.component';
 
 export const Approutes: Routes = [
   {
@@ -41,7 +42,7 @@ export const Approutes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  },
+  }
 ];
 
 @NgModule({
