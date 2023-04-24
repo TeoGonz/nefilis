@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,7 @@ import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './shared/home/home.component';
 import { InformationComponent } from './entity/information/information.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { FormComponent } from './content/form/form.component';
 
 const bootstrapImports = [
   NgbModule,
@@ -19,10 +21,12 @@ const bootstrapImports = [
     AppComponent,
     HomeComponent,
     InformationComponent,
-    SidebarComponent
+    SidebarComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     ...bootstrapImports
   ],
