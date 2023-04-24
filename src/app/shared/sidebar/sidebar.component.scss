@@ -139,3 +139,21 @@ body {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
+
+ul{
+    list-style: none;
+}
+  .nav-item{
+    padding-left: 1em !important;
+    :hover{
+        cursor: pointer;
+        background-color: red !important;
+    }
+    a{
+        padding: 1em;
+        :hover{
+            cursor: pointer;
+            background-color: red !important;
+        }
+    }
+  }
