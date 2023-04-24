@@ -1,3 +1,33 @@
+.img-sidebar{
+    width: 35px;
+}
+.sidebar-web{
+    margin: 0;
+    padding: 0;
+    left:0;
+    background: black !important;
+    li > a {
+        color:color !important;
+        span {
+            color:white;
+        }
+        i{
+            color:white;
+        }
+    }
+    .dropdown-user{
+        a{    
+            strong {
+                color: white;
+            }
+        }
+    }
+}
+
+.bi-list{
+   color:white;
+}
+
 body {
     min-height: 100vh;
     min-height: -webkit-fill-available;

@@ -1,14 +1,25 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; height: 100vh; position: fixed; top:0;">
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar-web" style="height: 100vh; position: fixed; top:0; z-index: 99999;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
         <svg class="bi pe-none me-2" width="40" height="32">
             <use xlink:href="#bootstrap" />
         </svg>
         <span class="fs-4">
-            <img src="../../../assets/img/logo.svg" alt="">
+            <div class="row">
+                <div class="col-md-8">
+                    <img src="../../../assets/img/logo.svg"  class="img-sidebar-web" *ngIf="isExpanded" alt="">
+                    <img src="../../../assets/img/netflix.svg"   class="img-sidebar"  *ngIf="!isExpanded" alt="">
+                </div>
+                <div class="col-md-4" style="text-align: right;">
+                    <i class="bi bi-list" *ngIf="!isExpanded" (click)="sendForm('true')"></i>
+                    <i class="bi bi-list" *ngIf="isExpanded"  (click)="sendForm('false')"></i>
+                </div>
+            </div>
+            
+
         </span>
     </a>
     <hr>
-    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+     <ul *ngIf="isExpanded" [ngClass]="{'nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start': isExpanded, 'nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center': !isExpanded}"  class="" id="menu">
         <li class="nav-item">
             <a href="#" class="nav-link align-middle px-0">
                 <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
@@ -65,21 +76,45 @@
                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
         </li>
     </ul>
+    <ul  *ngIf="!isExpanded"   class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
+        <li class="nav-item">
+            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                <i class="bi-house fs-1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                <i class="bi-speedometer2 fs-1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+                <i class="bi-table fs-1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                <i class="bi-heart fs-1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                <i class="bi-people fs-1"></i>
+            </a>
+        </li>
+    </ul>
     <hr>
-    <div class="dropdown">
-        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
-            data-bs-toggle="dropdown" aria-expanded="false">
+    <div ngbDropdown class="nav-item d-inline-block me-3 dropdown-user">
+        <a class="d-flex align-items-center  p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
             <strong>mdo</strong>
         </a>
-        <ul class="dropdown-menu text-small shadow">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-        </ul>
-    </div>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+    
+
 </div>
