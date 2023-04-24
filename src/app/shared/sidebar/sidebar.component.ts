@@ -18,8 +18,8 @@ export class SidebarComponent {
     { title: 'Finanzas', icon: 'fs-4 bi-cash', route: 'admin/finance' },
     { title: 'Comunicaciones', icon: 'fs-4 bi-soundwave', route: 'admin/communications' },
     { title: 'Judicial', icon: 'fs-4 bi-briefcase', route: 'admin/judicial' },
-    { title: 'Recursos humanos', icon: 'fs-4 bi-people', route: '#' },
-    { title: 'Marketing', icon: 'fs-4 bi-newspaper', route: '#' }
+    { title: 'Recursos humanos', icon: 'fs-4 bi-people', route: 'admin/rrhh' },
+    { title: 'Marketing', icon: 'fs-4 bi-newspaper', route: 'admin/marketing' }
   ]
 
   isExpanded = false;

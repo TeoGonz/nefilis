@@ -10,6 +10,8 @@ import { ContentsComponent } from './contents/contents.component';
 import { FinanceComponent } from './finance/finance.component';
 import { CommunicationsComponent } from './communications/communications.component';
 import { JudicialComponent } from './judicial/judicial.component';
+import { RrhhComponent } from './rrhh/rrhh.component';
+import { MarketingComponent } from './marketing/marketing.component';
 
 const adminRoutes: Routes = [
   {
@@ -50,6 +52,14 @@ const adminRoutes: Routes = [
       {
         path: 'judicial',
         component: JudicialComponent
+      },
+      {
+        path: 'rrhh',
+        component: RrhhComponent
+      },
+      {
+        path: 'marketing',
+        component: MarketingComponent
       }
       /* {
         path: 'add',
@@ -80,7 +90,9 @@ const adminRoutes: Routes = [
     ContentsComponent,
     FinanceComponent,
     CommunicationsComponent,
-    JudicialComponent
+    JudicialComponent,
+    RrhhComponent,
+    MarketingComponent
   ]
 })
 export class AdminModule { }
