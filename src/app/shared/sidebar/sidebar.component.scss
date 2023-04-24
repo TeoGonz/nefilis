@@ -135,7 +135,7 @@
     padding: 0px;
 
     a {
-      padding: 1em 0px;
+      padding: 0.5em 0px;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -160,5 +160,12 @@
     place-items: center;
     padding: 1em;
     width: 100%;
+  }
+
+  .profile-nav {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding: 10px;
   }
 }

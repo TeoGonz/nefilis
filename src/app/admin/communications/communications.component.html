@@ -1,0 +1,46 @@
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+      role="tab" aria-controls="nav-home" aria-selected="true">Comunicaciones</button>
+  </div>
+</nav>
+
+<div class="tab-content" style="background-color: white;" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Comunicaciones</h1>
+        <section>
+          <h4>Ambiente</h4>
+          <ul>
+            <li><b>CCO Comunicaciones</b></li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Comunicaciones</h4>
+          <p>
+            El equipo de Comunicaciones de Netflix es responsable de contar la historia más amplia de Netflix, incluidos
+            productos, asociaciones, problemas de política, cultura, ejecutivos y gestión de problemas. Se crea
+            conciencia sobre Netflix y sus atributos a través de la narración de historias en una amplia gama de
+            plataformas de medios tradicionales, como periódicos, revistas, noticias de radio y televisión.
+          </p>
+        </section>
+
+        <section class="d-flex justify-content-center align-items-center p-3">
+
+          <ng-container *ngFor="let employee of employeeInfo">
+            <div class="card card-employee m-3">
+              <img src="{{employee.img}}" alt="">
+              <span>
+                <h3>{{employee.name}}</h3>
+                <p class="text-muted">{{employee.job}}</p>
+              </span>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</div>

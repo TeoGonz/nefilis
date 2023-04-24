@@ -15,8 +15,9 @@ export class SidebarComponent {
     { title: 'Ingeniería', icon: 'fs-4 bi-gear-fill', route: 'admin/engineering' },
     { title: 'Planeación', icon: 'fs-4 bi-calendar-check', route: 'admin/planning' },
     { title: 'Contenidos', icon: 'fs-4 bi-tv', route: 'admin/contents' },
-    { title: 'Finanzas', icon: 'fs-4 bi-cash', route: '#' },
-    { title: 'Comunicaciones', icon: 'fs-4 bi-soundwave', route: '#' },
+    { title: 'Finanzas', icon: 'fs-4 bi-cash', route: 'admin/finance' },
+    { title: 'Comunicaciones', icon: 'fs-4 bi-soundwave', route: 'admin/communications' },
+    { title: 'Judicial', icon: 'fs-4 bi-briefcase', route: 'admin/judicial' },
     { title: 'Recursos humanos', icon: 'fs-4 bi-people', route: '#' },
     { title: 'Marketing', icon: 'fs-4 bi-newspaper', route: '#' }
   ]

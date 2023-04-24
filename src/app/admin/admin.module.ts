@@ -7,6 +7,9 @@ import { FormComponent } from '../content/form/form.component';
 import { EngineeringComponent } from './engineering/engineering.component';
 import { PlanningComponent } from './planning/planning.component';
 import { ContentsComponent } from './contents/contents.component';
+import { FinanceComponent } from './finance/finance.component';
+import { CommunicationsComponent } from './communications/communications.component';
+import { JudicialComponent } from './judicial/judicial.component';
 
 const adminRoutes: Routes = [
   {
@@ -35,6 +38,18 @@ const adminRoutes: Routes = [
       {
         path: 'contents',
         component: ContentsComponent
+      },
+      {
+        path: 'finance',
+        component: FinanceComponent
+      },
+      {
+        path: 'communications',
+        component: CommunicationsComponent
+      },
+      {
+        path: 'judicial',
+        component: JudicialComponent
       }
       /* {
         path: 'add',
@@ -62,7 +77,10 @@ const adminRoutes: Routes = [
     FormComponent,
     EngineeringComponent,
     PlanningComponent,
-    ContentsComponent
+    ContentsComponent,
+    FinanceComponent,
+    CommunicationsComponent,
+    JudicialComponent
   ]
 })
 export class AdminModule { }

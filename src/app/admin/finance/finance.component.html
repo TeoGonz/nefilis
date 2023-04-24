@@ -1,0 +1,55 @@
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+      role="tab" aria-controls="nav-home" aria-selected="true">Finanzas</button>
+  </div>
+</nav>
+
+<div class="tab-content" style="background-color: white;" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="row">
+      <div class="col">
+        <h1>Finanzas</h1>
+        <section>
+          <h4>Ambiente</h4>
+          <ul>
+            <li><b>Director jefe del Departamento Financiero:</b> Spencer Neumann</li>
+            <li><b>Vicepresidente de Finanzas:</b> Spencer Wang</li>
+            <li><b>Equipo de finanzas</b></li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Departamento financiero</h4>
+          <p>
+            Estrategia empresarial, Planificación y Análisis; Investigación y relaciones con inversores; y Desarrollo
+            empresarial y Fusiones y Adquisiciones. El equipo de Estrategia empresarial, Planificación y Análisis se
+            ocupa de las ganancias y pérdidas globales, los estudios sobre suscriptores en todos los territorios y la
+            elaboración de análisis para tomar decisiones clave como la estructura de capital, los objetivos de márgenes
+            y el crecimiento de la plantilla.
+          </p>
+          <p>
+            Spencer y el equipo de Relaciones con los inversores trabajan en la
+            relación de Netflix con los inversores en capital social y deuda, colaboran en la optimización de la
+            estructura del capital y su obtención, y acometen proyectos de investigación especiales sobre nuevas
+            oportunidades de negocio y análisis de la competencia.
+          </p>
+        </section>
+
+        <section class="d-flex justify-content-center align-items-center p-3">
+
+          <ng-container *ngFor="let employee of employeeInfo">
+            <div class="card card-employee m-3">
+              <img src="{{employee.img}}" alt="">
+              <span>
+                <h3>{{employee.name}}</h3>
+                <p class="text-muted">{{employee.job}}</p>
+              </span>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</div>
