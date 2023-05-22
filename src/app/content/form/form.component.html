@@ -12,18 +12,14 @@
       <div class="col d-flex align-items-center justify-content-center" style="background: white;">
         <div class="col-4 p-4 d-flex justify-content-center">
           <div class="card">
-            <img src="{{form.portada || 'https://i.stack.imgur.com/mwFzF.png'}}"
-              alt="Fissure in Sandstone" />
+            <img src="{{form.portada || 'https://i.stack.imgur.com/mwFzF.png'}}" alt="Fissure in Sandstone" />
             <div class="card-body">
-              <h5 class="card-title">{{form.titulo}}</h5>
-              <!-- <p class="card-text">{{i[3]}}</p> -->
-              <!-- <a href="{{form.trailer}}">
-              </a> -->
               <div class="w-100 d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-primary w-50" (click)="seeTrailer(form.trailer)"
+                <h5 class="card-title">{{form.titulo}}</h5>
+                <!-- <button type="button" class="btn btn-primary w-50" (click)="seeTrailer(form.trailer)"
                   data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <i class="bi bi-camera-reels"></i> Trailer
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
@@ -67,40 +63,43 @@
 
 
 <div class="container-fluid information-nefilis" style="background: black;">
-  <br>
-  <h3 id="home" class="text-white p-1">New releases</h3>
   <div class="row">
-    <div class="col col-md-2" style="margin:0.5em" *ngFor="let i of moviesPreview">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="{{i[1]}}" alt="Avatar" style="width:300px;height:300px;">
-          </div>
-          <div class="flip-card-back">
-            <h1>{{i[0]}}</h1>
-            <div class="text">
-              <p style="object-fit: contain;  word-wrap: break-word;">{{i[3]}}</p>
+    <div class="col">
+      <div class="main-container">
+        <h3 id="home" class="text-white p-1">New releases</h3>
+        <div class="row">
+          <div class="col col-sm-12 col-md-2" *ngFor="let i of moviesPreview">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="{{i[1]}}" alt="Avatar" class="release-img">
+                </div>
+                <div class="flip-card-back">
+                  <h1>{{i[0]}}</h1>
+                  <div class="text">
+                    <p style="object-fit: contain;  word-wrap: break-word;">{{i[3]}}</p>
+                  </div>
+                  <a href="{{i[2]}}" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-primary w-50 rounded-pill" (click)="seeTrailer(i[2])">
+                      <i class="bi bi-camera-reels"></i> Trailer
+                    </button>
+                  </a>
+                </div>
+              </div>
             </div>
-            <a href="{{i[2]}}" target="_blank" rel="noopener noreferrer">
-              <button type="button" class="btn btn-primary" (click)="seeTrailer(i[2])">
-                <i class="bi bi-camera-reels"></i> Trailer
-              </button>
-            </a>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
 
 <div class="container-fluid" style="background: black;">
-
   <app-information></app-information>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -108,15 +107,15 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
-        <iframe src="[(ngModel)]='form.trailer'" title="JACKASS 4 POR SIEMPRE Tráiler Español (2021)" frameborder="0"
+        <iframe width="560" height="315" src="{{urlVideo}}" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe>
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary save-trailer rounded">Save changes</button>
+        <button type="button" class="btn btn-secondary rounded" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
-</div>
+</div> -->

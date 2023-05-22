@@ -24,39 +24,6 @@
     </ng-container>
 
   </ul>
-  <!-- <ul *ngIf="!isExpanded"
-    class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
-    <li class="nav-item">
-      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-original-title="Home">
-        <i class="bi-house fs-1"></i>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-original-title="Dashboard">
-        <i class="bi-speedometer2 fs-1"></i>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-original-title="Orders">
-        <i class="bi-table fs-1"></i>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-original-title="Products">
-        <i class="bi-heart fs-1"></i>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-original-title="Customers">
-        <i class="bi-people fs-1"></i>
-      </a>
-    </li>
-  </ul> -->
   <hr>
   <div ngbDropdown class="nav-item profile-nav dropdown-user">
     <a class="d-flex align-items-center link-light text-decoration-none dropdown-toggle w-100" id="dropdownBasic1"
@@ -67,7 +34,7 @@
     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
       <button ngbDropdownItem>Perfil</button>
       <button ngbDropdownItem>Ajustes</button>
-      <button ngbDropdownItem [routerLink]="['login']">Cerrar sesión</button>
+      <button ngbDropdownItem [routerLink]="['/login']">Cerrar sesión</button>
     </div>
   </div>
 

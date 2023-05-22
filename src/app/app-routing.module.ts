@@ -5,6 +5,7 @@ import { HomeComponent } from './shared/home/home.component';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { FormComponent } from './content/form/form.component';
+import { NewsletterComponent } from './shared/newsletter/newsletter.component';
 
 export const Approutes: Routes = [
   {
@@ -16,7 +17,7 @@ export const Approutes: Routes = [
     component: LoginComponent
   },
   {
-    path: '',
+    path: 'app',
     component: AppComponent,
     runGuardsAndResolvers: 'always',
     children: [
@@ -42,6 +43,14 @@ export const Approutes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'newsletter',
+    component: NewsletterComponent
   }
 ];
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomSanitizer, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-form',
@@ -23,7 +24,7 @@ export class FormComponent {
   preview: string = ""
   previewSlice: any;
   moviesPreview: any;
-  urlVideo: string = ""
+  urlVideo: any;
   titulo: string = ""
 
   public form: any = {
@@ -33,7 +34,7 @@ export class FormComponent {
     sinopsis: ""
   }
 
-  constructor() {
+  constructor(private titleService: Title, private _sanitizer: DomSanitizer) {
     this.isOpen = false;
   }
 
@@ -44,6 +45,7 @@ export class FormComponent {
     } else {
       this.movies += `${this.form.titulo}|${this.form.portada}|${this.form.trailer}|${this.form.sinopsis}+`
     }
+    this.isOpen = false;
 
     localStorage.setItem('new_movies', this.movies)
     this.getMovies();
@@ -66,6 +68,7 @@ export class FormComponent {
   }
 
   ngOnInit() {
+    this.titleService.setTitle('Nefilis - Gestor de contenidos');
     this.getMovies();
     console.log(this.moviesPreview)
   }

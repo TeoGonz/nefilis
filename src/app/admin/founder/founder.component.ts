@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-founder',
@@ -13,11 +14,10 @@ export class FounderComponent implements OnInit {
     { name: 'Greg Peters', job: 'Co-Ceo', img: '../../../assets/img/components/ceo-founders/3.png' }
   ];
 
-  constructor() {
-    console.log(this.employeeInfo);
-  }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Nefilis - Ceo & Fundador');
   }
 
 }
