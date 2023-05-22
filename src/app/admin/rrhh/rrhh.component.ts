@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-rrhh',
@@ -11,11 +12,10 @@ export class RrhhComponent implements OnInit {
     { name: 'Sergio Ezama', job: 'Director jefe de talento humano', img: '../../../assets/img/components/rrhh/1.png' },
   ];
 
-  constructor() {
-    console.log(this.employeeInfo);
-  }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Nefilis - RRHH');
   }
 
 }

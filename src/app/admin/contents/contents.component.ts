@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contents',
@@ -14,9 +15,10 @@ export class ContentsComponent implements OnInit {
     { name: 'Scott Stuber', job: 'Director de películas de Netflix', img: '../../../assets/img/components/contents/4.png' }
   ];
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Nefilis - Contenidos');
   }
 
 }

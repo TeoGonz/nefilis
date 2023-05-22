@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-planning',
@@ -11,9 +12,10 @@ export class PlanningComponent implements OnInit {
     { name: 'Pablo Pérez Rosso', job: 'Vicepresidente de estrategía, planeación y análisis', img: '../../../assets/img/components/planning/1.png' }
   ];
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Nefilis - Planeación');
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -18,28 +19,29 @@ export class HomeComponent implements OnInit {
   }
 
 
-  movies :string = ""
-  preview :string = ""
-  previewSlice : any;
-  moviesPreview : any;
-  urlVideo:string = ""
+  movies: string = ""
+  preview: string = ""
+  previewSlice: any;
+  moviesPreview: any;
+  urlVideo: string = ""
 
-  getMovies(){
-    var moviesSlice:any = []
-    this.preview  =  String(localStorage.getItem('new_movies'))
+  getMovies() {
+    var moviesSlice: any = []
+    this.preview = String(localStorage.getItem('new_movies'))
     this.previewSlice = this.preview.split('+');
-    this.previewSlice.forEach(function (value:any) {
+    this.previewSlice.forEach(function (value: any) {
       var slice = value.split('|')
-      if(slice[0]){moviesSlice.push(slice)}
-      
-  });
-  this.moviesPreview = moviesSlice;
-}
+      if (slice[0]) { moviesSlice.push(slice) }
+
+    });
+    this.moviesPreview = moviesSlice;
+  }
 
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Nefilis - Home');
     this.getMovies();
   }
 

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderNavComponent } from './shared/header-nav/header-nav.component';
 import { LoginComponent } from './auth/login/login.component';
+import { NewsletterComponent } from './shared/newsletter/newsletter.component';
 
 
 const bootstrapImports = [
@@ -27,6 +28,7 @@ const bootstrapImports = [
     LayoutComponent,
     HeaderNavComponent,
     SidebarComponent,
+    NewsletterComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ const bootstrapImports = [
     AppRoutingModule,
     ...bootstrapImports
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-finance',
@@ -12,11 +13,10 @@ export class FinanceComponent implements OnInit {
     { name: 'Spencer Wang', job: 'Vicepresidente de finanzas, relaciones con inversiones y desarrollo empresarial', img: '../../../assets/img/components/finance/2.png' },
   ];
 
-  constructor() {
-    console.log(this.employeeInfo);
-  }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Nefilis - Finanzas');
   }
 
 }

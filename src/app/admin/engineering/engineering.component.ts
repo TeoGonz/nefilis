@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-engineering',
@@ -14,9 +15,10 @@ export class EngineeringComponent implements OnInit {
     { name: 'Steve Urban', job: 'Lider de ingeniería', img: '../../../assets/img/components/engineering/4.png' }
   ];
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Nefilis - Ingeniería');
   }
 
 }

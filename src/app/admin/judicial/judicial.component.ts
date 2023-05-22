@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-judicial',
@@ -14,9 +15,10 @@ export class JudicialComponent implements OnInit {
     { name: 'Verna Myers', job: 'Vicepresidenta de estrategia de inclusión', img: '../../../assets/img/components/judicial/4.png' }
   ];
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Nefilis - Judicial');
   }
 
 }
