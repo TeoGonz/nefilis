@@ -23,6 +23,7 @@ const bootstrapImports = [
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderNavComponent,
     HomeComponent,
     LoginComponent,
     LayoutComponent,

@@ -1,34 +1,32 @@
-<div class="container-fluid netflix-background">
+<div class="netflix-background">
+</div>
 
-  <nav class="navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" [routerLink]="['/home']">
-        <img src="../assets/img/logo.svg" alt="" srcset="">
-      </a>
-    </div>
-  </nav>
+<div class="container-fluid blur-container d-flex flex-column align-items-center justify-content-center">
+  <div class="col blur-col">
+    <header-nav [loginAccess]="false"></header-nav>
 
-  <div class="col">
-    <div class="row">
-      <div class="login-container">
-        <div class="login-content">
-          <div class="login-header mb-4">
-            <h1>Iniciar Sesión</h1>
-          </div>
-          <div class="login-body mb-5">
-            <div class="input-group login-input mb-4">
-              <input type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default" placeholder="Email o número de teléfono">
+    <div class="col">
+      <div class="row">
+        <div class="login-container">
+          <div class="login-content">
+            <div class="login-header mb-4">
+              <h1>Iniciar Sesión</h1>
             </div>
+            <div class="login-body mb-5">
+              <div class="input-group login-input mb-4">
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" placeholder="Email o número de teléfono">
+              </div>
 
-            <div class="input-group login-input mb-4">
-              <input type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default" placeholder="Contraseña">
+              <div class="input-group login-input mb-4">
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" placeholder="Contraseña">
+              </div>
+
+              <a href="app/admin/founders">
+                <button class="btn login-button-lg" type="button">Entrar</button>
+              </a>
             </div>
-
-            <a href="app/admin/founders">
-              <button class="btn login-button-lg" type="button">Entrar</button>
-            </a>
           </div>
         </div>
       </div>

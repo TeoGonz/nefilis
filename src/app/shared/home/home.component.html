@@ -1,60 +1,21 @@
-<div class="container-fluid netflix-background">
-  <nav class="navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="home.html">
-        <img src="../../../assets/img/logo.svg" alt="" srcset="">
-      </a>
-      <div class="d-flex">
-        <div ngbDropdown class="nav-item d-inline-block me-3">
-          <button type="button" class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>
-            {{componentSettings.buttons.language}}
-          </button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem>Language 1</button>
-            <button ngbDropdownItem>Language 2</button>
-            <button ngbDropdownItem>Language 3</button>
+<div class="netflix-background">
+</div>
+
+<div class="container-fluid blur-container d-flex flex-column align-items-center justify-content-center">
+  <div class="col blur-col">
+    <header-nav [loginAccess]="true"></header-nav>
+
+    <div class="col">
+      <div class="row">
+        <div class="banner-phrases">
+          <h1>{{bannerPhrases.welcome}}</h1>
+          <p>{{bannerPhrases.promo}}</p>
+          <div>
+            <button class="btn btn-primary rounded-pill p-3"
+              [routerLink]="['/newsletter']">{{bannerPhrases.newsLetter}}</button>
           </div>
         </div>
-
-        <div class="nav-item">
-          <a [routerLink]="['/login']" rel="noopener noreferrer">
-            <button class="btn login-button" type="submit">Login</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <div class="col">
-    <div class="row">
-      <div class="home-phrases">
-        <h1>{{bannerPhrases.welcome}}</h1>
-        <p>{{bannerPhrases.promo}}</p>
       </div>
     </div>
   </div>
-
-  <!-- <div class="container" style="color:black !important">
-    <div class="row">
-
-      <div class="row">
-        <div class="col col-md-4" *ngFor="let i of moviesPreview">
-          <div class="card">
-            <img src="{{i[1]}}" class="card-img-top" alt="Fissure in Sandstone" />
-            <div class="card-body">
-              <h5 class="card-title">{{i[0]}}</h5>
-              <p class="card-text">{{i[3]}}</p>
-
-              <a href="{{i[2]}}" target="_blank" rel="noopener noreferrer">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <i class="bi bi-camera-reels"></i> Trailer
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <app-information></app-information>
-      </div>
-    </div>
-  </div> -->
 </div>

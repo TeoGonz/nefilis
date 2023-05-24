@@ -1,7 +1,25 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="./../../../assets/img/logo.svg" alt="" width="auto" height="24" class="d-inline-block align-text-top">
+    <a class="navbar-brand" [routerLink]="['/home']">
+      <img src="../../../assets/img/logo.svg" alt="" srcset="">
     </a>
+    <div class="d-flex" *ngIf="loginAccess">
+      <div ngbDropdown class="nav-item d-inline-block me-3">
+        <button type="button" class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>
+          {{componentSettings.buttons.language}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Language 1</button>
+          <button ngbDropdownItem>Language 2</button>
+          <button ngbDropdownItem>Language 3</button>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a [routerLink]="['/login']" rel="noopener noreferrer">
+          <button class="btn login-button" type="submit">Login</button>
+        </a>
+      </div>
+    </div>
   </div>
 </nav>

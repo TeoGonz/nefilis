@@ -9,7 +9,8 @@ import { Title } from '@angular/platform-browser';
 export class HomeComponent implements OnInit {
   public bannerPhrases = {
     welcome: "Películas ilimitadas, shows de tv y más.",
-    promo: "Mira lo que quieras, cancela cuando quieras."
+    promo: "Mira lo que quieras, cancela cuando quieras.",
+    newsLetter: "Subscribirse al NewsLetter"
   };
 
   public componentSettings = {

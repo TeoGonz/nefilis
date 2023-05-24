@@ -32,14 +32,22 @@ main {
 
 .netflix-background {
   background-image: url(./assets/img/background.png);
-  /* filter: blur(8px); */
-  /* height: 100%;
-  width: 100%;
-  z-index: -1; */
-  /* -webkit-filter: blur(8px); */
+  filter: blur(6px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.blur-container {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.blur-col {
+  width: 85%;
 }
 
 .navbar-brand > img {
@@ -52,4 +60,28 @@ main {
   background: $primary-color !important;
   border-color: $primary-color !important;
   border-radius: 0;
+}
+
+.banner-phrases {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 71px);
+}
+
+.banner-phrases > h1 {
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.banner-phrases > p {
+  font-size: 34px;
+  font-weight: 200;
+}
+
+.btn-primary:hover {
+  background: #e23f3f !important;
+  color: white;
 }
